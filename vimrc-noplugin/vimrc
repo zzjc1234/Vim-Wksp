@@ -134,10 +134,10 @@ map sd :set splitbelow<CR>:split<CR>
 
 
 " Resize splits with arrow keys
-map <up> :res +5<CR>
-map <down> :res -5<CR>
-map <left> :vertical resize-5<CR>
-map <right> :vertical resize+5<CR>
+"map <up> :res +5<CR>
+"map <down> :res -5<CR>
+"map <left> :vertical resize-5<CR>
+"map <right> :vertical resize+5<CR>
 map <LEADER>ss :set spell!<CR>
 
 noremap <C-x> ea<C-x>s
