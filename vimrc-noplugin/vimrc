@@ -182,7 +182,7 @@ func! CompileBuildrrr()
   endif
 endfunc
 
----added by zzjc
+"---added by zzjc
 
 set ruler " 打开状态栏标尺
 set shiftwidth=4 " 设定 << 和 >> 命令移动时的宽度为 4
