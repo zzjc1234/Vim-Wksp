@@ -33,6 +33,8 @@ Before we start to learn vim's basic operation, there are several things to ment
 
     Vim adventure is a great game intended to help beginners to learn the vim with fun. Since it is non-free, you can pay for the rest of the game or find a reverse engineered version.
 
+5. https://openvim.com
+
 ---
 
 ## Mode Intro
@@ -48,58 +50,109 @@ Before we start to learn vim's basic operation, there are several things to ment
 1. Navigating
    1. Basic: hjkl
 
-      You can use hjkl to replace the direction key on your key board.
+      You can use `hjkl` to replace the direction key on your key board.
 
-      h for $\leftarrow$, j for $\downarrow$, k for $\uparrow$, l for $\rightarrow$
+      `h` for $\leftarrow$, `j` for $\downarrow$, `k` for $\uparrow$, `l` for $\rightarrow$
 
    2. Word: bwe
 
       You can use the wbe to jump word by word.
 
-      Difference between `word` and `WORD`: The `word` is the combination of (a-zA-Z0-9), or the combination of punctuation and character like @#$% while the WORD is any non-empty string between the white-space.
+      Difference between `word` and `WORD`: The `word` is the combination of (a-zA-Z0-9), or the combination of punctuation and character like `@#$%` while the WORD is any non-empty string between the white-space.
 
-      NOTE THAT as213df%#^>?^& is two `word`, as213df and %#^>?^&.
+      NOTE THAT `as213df%#^>?^&` is two `word`, `as213df` and `%#^>?^&`.
 
-      - w: go to the beginning of next word
-      - b: go to the beginning of previous word
-      - e: go to the end of the word
-      - W: go to the  beginning of next WORD
-      - B: go to the beginning of previous WORD
-      - E: end of the WORD
+      - `w`: go to the beginning of next word
+      - `b`: go to the beginning of previous word
+      - `e`: go to the end of the word
+      - `W`: go to the  beginning of next WORD
+      - `B`: go to the beginning of previous WORD
+      - `E`: end of the WORD
 
    3. Line: 0, ^, $
 
-      - 0: Go to the beginning of line
-      - ^: Go to the beginning of line (after whitespace)
-      - $: Go to the end of line
+      - `0`: Go to the beginning of line
+      - `^`: Go to the beginning of line (after whitespace)
+      - `$`: Go to the end of line
 
    4. Char:
 
-      - f{char}: Go forward to character
-      - F{char}: Go backward to character
+      - `f{char}`: Go forward to character
+      - `F{char}`: Go backward to character
 
    5. Document
 
-      - gg: First line
-      - G: Last line
-      - :{number}: Go to line {number}
-      - {number}G: Go to line {number}
-      - {number}j: Go down {number} lines
-      - {number}k: Go up {number} lines
+      - `gg`: First line
+      - `G`: Last line
+      - `:{number}`: Go to line {number}
+      - `{number}G`: Go to line {number}
+      - `{number}j`: Go down {number} lines
+      - `{number}k`: Go up {number} lines
 
    6. Window
 
-      - zz: Center this line
-      - zt: Top this line
-      - zb: Bottom this line
-      - H: Move to top of screen
-      - M: Move to middle of screen
-      - L: Move to bottom of screen
+      - `zz`: Center this line
+      - `zt`: Top this line
+      - `zb`: Bottom this line
+      - `H`: Move to top of screen
+      - `M`: Move to middle of screen
+      - `L`: Move to bottom of screen
 
    7. Search
+
+      You can use search the string by entering `/` and `?`
+
+      Difference between `/` and `?`:  
+      `/` means search from top to bottom,  
+      `?` means search from bottom to top.
+
+      If you want to search for exactly the `word`(`WORD`?), you can search in this way: /\\<{word you want to search}\\> or ?\\<{word you want to search}\\>
+
+      For example, you can use /\\<hello\\> to search the word `hello` from top to bottom
+
+      - `n`: Search for the next pattern
+      - `N`: Previous match
+      - `*`: Next whole word under cursor
+      - `#`: Previous whole word under cursor
+
+      Vim will record your search history. You use command like /$\uparrow$ or /$\downarrow$ if you want to search the word you searched before.
+
+2. Clipboard:
+   1. `x`: Delete the character
+   2. `dd`: Cut the line
+   3. `yy`: Yank line
+   4. `p`: Paste
+   5. `P`: Paste before
+   6. `"*p / "+p:` Paste from system clipboard
+   7. `"*y / "+y`: Paste to system clipboard
+
+3. Command
 
 ### Why key in vim is so uncomfortable?
 
 ![keyboard](src/keyboard.jpeg)
 
+### Insert Mode
+
+1. Open Insert Mode:
+   1. `a`: append
+   2. `i`: insert
+   3. `o`: insert in next line
+   4. `A`: append at the end of the line
+   5. `I`: insert text before the first non-blank in the line
+   6. `O`: insert in previous line
+
+### Command Mode
+
+1. Exiting Vim:
+   1. `:q`: quit the file
+   2. `:qa`: quit all the file
+   3. `:w`: Write(Save the file)
+   4. `:wq`: Write and quit the file
+   5. `:x`: Write and quit the file(only write when there is change).
+   6. `ZZ`: Save and quit（the same to :x)
+   7. `ZQ`: Quit without checking changes
+   8. `!`: You can add a `!` at the end of the command to do the command by force. For example to quit the file by force, you can use `:q!`
+
 ---
+
