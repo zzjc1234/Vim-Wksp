@@ -41,9 +41,9 @@ Before we start to learn vim's basic operation, there are several things to ment
 
 1. Normal Mode
 2. Insert Mode
-3. Command Mode
-4. Visual Mode
-5. Replace Mode*
+3. Visual Mode
+4. Replace Mode*
+5. Command Mode
 
 ### Normal Mode
 
@@ -136,12 +136,32 @@ Before we start to learn vim's basic operation, there are several things to ment
    |---|---|
    |d|w|
 
+- Text Objects
+
+   |key|Object|
+   |---|---|
+   |p|Paragraph|
+   |w|Word|
+   |s|Sentence|
+   |[ ( { <	A [], (), or {}|block|
+   |' " `|A quoted string|
+   |b|A block [(|
+   |B|A block in [{|
+   |t|A XML tag block|
+
+- Sentence and Paragraph in vim
+
+- Command
+
    |`dl`|delete character (alias: "x")
    |---|---|
+   |`dw`|delete next word|
+   |`dW`|delete next WORD|
    |`diw`|delete inner word|
    |`daw`|delete a word|
    |`diW`|delete inner WORD|
    |`daW`|delete a WORD|
+   |`db`|delete to beginning of the word|
    |`dgn`|delete the next search pattern match|
    |`dd`|delete one line(actually cut one line)|
    |`dis`|delete inner sentence|
@@ -172,6 +192,23 @@ Before we start to learn vim's basic operation, there are several things to ment
    4. `A`: append at the end of the line
    5. `I`: insert text before the first non-blank in the line
    6. `O`: insert in previous line
+   7. `s`: delete char and insert
+   8. `S`: delete line and insert
+   9. `C`: delete until the end of the line and insert
+
+2. Exit Insert Mode
+   1. Press \<Esc\>: exit insert mode
+   2. ctrl c: exit insert mode and abort current command
+
+### Visual Mode
+
+
+
+### Replace Mode*
+
+You can use `r` to replace a character.
+
+You can use `R` to enter the replace mode.
 
 ### Command Mode
 
@@ -184,6 +221,21 @@ Before we start to learn vim's basic operation, there are several things to ment
    6. `ZZ`: Save and quit（the same to :x)
    7. `ZQ`: Quit without checking changes
    8. `!`: You can add a `!` at the end of the command to do the command by force. For example to quit the file by force, you can use `:q!`
+
+2. Call the terminal
+
+   You can call the terminal by using the command `:term`. You can also use term to run command like compiling a c-file. For example: 
+
+   ```zsh
+   term gcc vim.c
+   term ./a.out
+   ```
+
+   You can also open a terminal window in the vim using the command; `:term`
+
+3. Run Vim command
+
+   Believe it or not, vim has its own language. You can use the command of vim to personalize your vim. This part will be included in the `Modify .vimrc(noplugin)`
 
 ---
 
