@@ -126,7 +126,38 @@ Before we start to learn vim's basic operation, there are several things to ment
    6. `"*p / "+p:` Paste from system clipboard
    7. `"*y / "+y`: Paste to system clipboard
 
-3. Command
+3. Opeartors
+
+   >Operators let you operate in a range of text (defined by motion). These are performed in normal mode.
+
+   For Example:
+
+   |Operator|Motion|
+   |---|---|
+   |d|w|
+
+   |`dl`|delete character (alias: "x")
+   |---|---|
+   |`diw`|delete inner word|
+   |`daw`|delete a word|
+   |`diW`|delete inner WORD|
+   |`daW`|delete a WORD|
+   |`dgn`|delete the next search pattern match|
+   |`dd`|delete one line(actually cut one line)|
+   |`dis`|delete inner sentence|
+   |`das`|delete a sentence|
+   |`dib`|delete inner '(' ')' block|
+   |`dab`|delete a '(' ')' block|
+   |`dip`|delete inner paragraph|
+   |`dap`|delete a paragraph|
+   |`diB`|delete inner '{' '}' block|
+   |`daB`|delete a '{' '}' block|
+
+   For more combinations, use `:help motion.txt`
+
+   You can repeat the command by assigning a number.
+
+   For example: 3dd means delete three lines.Times of repetition should be the multiplication of the numbers. Eg. 2y3y means yank 6 lines.
 
 ### Why key in vim is so uncomfortable?
 
