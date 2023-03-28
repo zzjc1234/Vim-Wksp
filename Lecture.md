@@ -200,9 +200,34 @@ Before we start to learn vim's basic operation, there are several things to ment
    1. Press \<Esc\>: exit insert mode
    2. ctrl c: exit insert mode and abort current command
 
+### Life Hack
+
+- Use `,` to repeat previous edit
+- Use `:!` to run command in terminal
+- Use `:r` to insert the file below the cursor
+- Vim Macro
+
+   You can use vim macro to complete the repetition work.
+
+   1. Enter `q\<char\>` to start recording the macro.
+   2. Edit one line
+   3. Enter `q` to stop recording
+   4. Move to the line you modify(You can include this step in recording the macro)
+   5. Enter `@\<char\>`
+
 ### Visual Mode
 
+1. Visual Mode
 
+   Start Visual mode per character.
+
+2. Visual Line Mode
+
+   Start Visual mode linewise.
+
+3. Visual Block Mode
+
+   Start Visual mode blockwise.
 
 ### Replace Mode*
 
@@ -224,7 +249,7 @@ You can use `R` to enter the replace mode.
 
 2. Call the terminal
 
-   You can call the terminal by using the command `:term`. You can also use term to run command like compiling a c-file. For example: 
+   You can call the terminal by using the command `:term`. You can also use term to run command like compiling a c-file. For example:
 
    ```zsh
    term gcc vim.c
@@ -239,3 +264,16 @@ You can use `R` to enter the replace mode.
 
 ---
 
+## Common Operation
+
+:vs or :vsplit  将当前窗口竖直分割，并在上面新窗口中显示当前文件
+
+:vs filename 将当前窗口竖直分割，新文件在新窗口中显示
+
+:sp 或者:sv或者:split  将当前窗口水平分割，并在左边新窗口中显示当前文件
+
+:sp filename 将当前窗口竖直分割，新文件在左边新窗口中显示
+
+:new 新建文件并竖直分割
+
+:vnew 新建文件并水平分割
