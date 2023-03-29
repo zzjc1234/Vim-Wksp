@@ -40,7 +40,7 @@ Before we start to learn vim's basic operation, there are several things to ment
 
     Vim adventure is a great game intended to help beginners to learn the vim with fun. Since it is non-free, you can pay for the rest of the game or find a reverse engineered version.
 
-5. https://openvim.com
+5. [openvim](https://openvim.com)
 
 ---
 
@@ -131,7 +131,7 @@ Before we start to learn vim's basic operation, there are several things to ment
    |p|Paragraph|
    |w|Word|
    |s|Sentence|
-   |[ ( { <	A [], (), or {}|block|
+   |[ ( { < A [], (), or {}|block|
    |' " `|A quoted string|
    |b|A block [(|
    |B|A block in [{|
@@ -262,7 +262,7 @@ You can use `R` to enter the replace mode.
    fg #go back to vim
    ```
 
-   You can also determine which terminal you use with the command 
+   You can also determine which terminal you use with the command
 
    ```vim
    :term {terminal you want to use}
@@ -360,3 +360,20 @@ You can use `R` to enter the replace mode.
    ```
 
    For more information, you can type `:help substitute` in vim.
+
+  - Regex in Search
+
+   The behavior of regex in vim can be determined by setting the magic.
+
+   |Mode|Behavior|
+   |---|---|
+   |magic \m|^，$，.，*,[] has special meaning|
+   |nomagic \M|^,$,\ has special meaning|
+   |verymagic \v|all character has special meaning|
+   |verynomagic \V|no character has special meaning except \ |
+
+   Example:
+
+   ```vim
+   :%s/\vmagics?/abstract/g
+   ```
