@@ -276,3 +276,5 @@ You may refer to -> `Vim-Wksp/Usage-reference/vimium.md`
   Use vim key bindings to view pdf files
 
 ​		You may refer to ->`Vim-Wksp/Usage-reference/sioyek.md`
+
++ [lazygit](https://github.com/jesseduffield/lazygit)
