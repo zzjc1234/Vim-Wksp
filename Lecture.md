@@ -6,10 +6,17 @@ This file gives a guideline for the vim workshop part 2.
 
 ## Menu
 
-1. Before Start
-2. Mode Intro
-3. Basic Operation
-4. Modify .vimrc(noplugin)
+- [Part 1 -- Basic Operation](#part-1----basic-operation)
+  - [Menu](#menu)
+  - [Before Start](#before-start)
+  - [Mode Intro](#mode-intro)
+  - [Normal Mode](#normal-mode)
+  - [Why key in vim is so uncomfortable?](#why-key-in-vim-is-so-uncomfortable)
+  - [Insert Mode](#insert-mode)
+  - [Life Hack](#life-hack)
+  - [Visual Mode](#visual-mode)
+  - [Replace Mode\*](#replace-mode)
+  - [Command Mode](#command-mode)
 
 ---
 
@@ -45,7 +52,7 @@ Before we start to learn vim's basic operation, there are several things to ment
 4. Replace Mode*
 5. Command Mode
 
-### Normal Mode
+## Normal Mode
 
 1. Navigating
    1. Basic: hjkl
@@ -97,25 +104,6 @@ Before we start to learn vim's basic operation, there are several things to ment
       - `H`: Move to top of screen
       - `M`: Move to middle of screen
       - `L`: Move to bottom of screen
-
-   7. Search
-
-      You can use search the string by entering `/` and `?`
-
-      Difference between `/` and `?`:  
-      `/` means search from top to bottom,  
-      `?` means search from bottom to top.
-
-      If you want to search for exactly the `word`(`WORD`?), you can search in this way: /\\<{word you want to search}\\> or ?\\<{word you want to search}\\>
-
-      For example, you can use /\\<hello\\> to search the word `hello` from top to bottom
-
-      - `n`: Search for the next pattern
-      - `N`: Previous match
-      - `*`: Next whole word under cursor
-      - `#`: Previous whole word under cursor
-
-      Vim will record your search history. You use command like /$\uparrow$ or /$\downarrow$ if you want to search the word you searched before.
 
 2. Clipboard:
    1. `x`: Delete the character
@@ -179,11 +167,11 @@ Before we start to learn vim's basic operation, there are several things to ment
 
    For example: 3dd means delete three lines.Times of repetition should be the multiplication of the numbers. Eg. 2y3y means yank 6 lines.
 
-### Why key in vim is so uncomfortable?
+## Why key in vim is so uncomfortable?
 
 ![keyboard](src/keyboard.jpeg)
 
-### Insert Mode
+## Insert Mode
 
 1. Open Insert Mode:
    1. `a`: append
@@ -200,7 +188,7 @@ Before we start to learn vim's basic operation, there are several things to ment
    1. Press \<Esc\>: exit insert mode
    2. ctrl c: exit insert mode and abort current command
 
-### Life Hack
+## Life Hack
 
 - Use `,` to repeat previous edit
 - Use `:!` to run command in terminal
@@ -215,7 +203,7 @@ Before we start to learn vim's basic operation, there are several things to ment
    4. Move to the line you modify(You can include this step in recording the macro)
    5. Enter `@\<char\>`
 
-### Visual Mode
+## Visual Mode
 
 1. Visual Mode
 
@@ -229,13 +217,13 @@ Before we start to learn vim's basic operation, there are several things to ment
 
    Start Visual mode blockwise.
 
-### Replace Mode*
+## Replace Mode*
 
 You can use `r` to replace a character.
 
 You can use `R` to enter the replace mode.
 
-### Command Mode
+## Command Mode
 
 1. Exiting Vim:
    1. `:q`: quit the file
@@ -251,31 +239,124 @@ You can use `R` to enter the replace mode.
 
    You can call the terminal by using the command `:term`. You can also use term to run command like compiling a c-file. For example:
 
-   ```zsh
-   term gcc vim.c
-   term ./a.out
+   ```vim
+   :term gcc vim.c
+   :term ./a.out
    ```
 
    You can also open a terminal window in the vim using the command; `:term`
+
+   You can use command to determine the position of the terminal. For example:
+
+   ```vim
+   :belowright term ++rows=10
+   ```
+
+   If you want to enter the terminal for a while and then go back to vim, you can use the following code
+
+   ```vim
+   <C-z> "suspend to vim and go to the terminal
+   ```
+
+   ```zsh
+   fg #go back to vim
+   ```
+
+   You can also determine which terminal you use with the command 
+
+   ```vim
+   :term {terminal you want to use}
+
+   " for example
+   :term python3
+   ```
 
 3. Run Vim command
 
    Believe it or not, vim has its own language. You can use the command of vim to personalize your vim. This part will be included in the `Modify .vimrc(noplugin)`
 
----
+4. Split the window
 
-## Common Operation
+   `:vs` or `:vsplit`: split the window vertically
 
-- Split the window
+   `:vs filename`: split the current window vertically, show the new file in the new window.
 
-`:vs` or `:vsplit`: split the window vertically
+   `:sp or :split`: split current window horizontally.
 
-`:vs filename`: split the current window vertically, show the new file in the new window.
+   `:sp filename`: split current window horizontally and show the new file in the new window
 
-`:sp or :split`: split current window horizontally.
+   `:new`: create new file and split the window horizontally
 
-`:sp filename`: split current window horizontally and show the new file in the new window
+   `:vnew`: create new file and split the window vertically
 
-`:new`: create new file and split the window horizontally
+- Search
 
-`:vnew`: create new file and split the window vertically
+   You can use search the string by entering `/` and `?`
+
+   Difference between `/` and `?`:  
+   `/` means search from top to bottom,  
+   `?` means search from bottom to top.
+
+   If you want to search for exactly the `word`(`WORD`?), you can search in this way: /\\<{word you want to search}\\> or ?\\<{word you want to search}\\>
+
+   For example, you can use /\\<hello\\> to search the word `hello` from top to bottom
+
+  - `n`: Search for the next pattern
+  - `N`: Previous match
+  - `*`: Next whole word under cursor
+  - `#`: Previous whole word under cursor
+
+   Vim will record your search history. You use command like /$\uparrow$ or /$\downarrow$ if you want to search the word you searched before.
+
+   You can also replace all the results fit the expression you search by command:
+
+   ```vim
+   {range}s/{search}/{replace}/{flags} {count}
+   ```
+
+   You can use \\<{word}\\> to search for the "word"
+
+  - range is the searching range, You can define the range in following way:
+
+      ```vim
+      {start},{end}
+      ```
+
+      There are some characters have special meaning when defining the range:
+
+      `%` stands for all the lines in the file
+
+      `.` stands for the current line
+
+      `$` stand for the last line in the file
+
+      If range is not set, subtitute will only happens on the current line.
+
+  - `s` stands for substitute
+
+  - Commonly used flags
+    - `g`: Replace all occurrences in the line. Without this argument, replacement occurs only for the first occurrence in each line.
+    - `i`: Ignore case for the pattern.
+    - `I`: Don't ignore case for the pattern.
+    - `n`: Report the number of matches, do not actually substitute.
+
+   Example:
+
+   ```vim
+   "replace all int with double
+   :%s/int/double/g
+
+   "replace first int in each line with double
+   :%s/int/double/
+
+   "replace all int in line1-line3 with double
+   :1,3s/int/double/g
+
+   "replace all int from current line to the next 4 line with double
+   :.,.+4s/int/double/g
+
+   "do :%s/int/double/g for 4 times(from current line to current+3 line)
+   :%s/int/double/g4
+   ```
+
+   For more information, you can type `:help substitute` in vim.
