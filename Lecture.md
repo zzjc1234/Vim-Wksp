@@ -266,14 +266,16 @@ You can use `R` to enter the replace mode.
 
 ## Common Operation
 
-:vs or :vsplit  将当前窗口竖直分割，并在上面新窗口中显示当前文件
+- Split the window
 
-:vs filename 将当前窗口竖直分割，新文件在新窗口中显示
+`:vs` or `:vsplit`: split the window vertically
 
-:sp 或者:sv或者:split  将当前窗口水平分割，并在左边新窗口中显示当前文件
+`:vs filename`: split the current window vertically, show the new file in the new window.
 
-:sp filename 将当前窗口竖直分割，新文件在左边新窗口中显示
+`:sp or :split`: split current window horizontally.
 
-:new 新建文件并竖直分割
+`:sp filename`: split current window horizontally and show the new file in the new window
 
-:vnew 新建文件并水平分割
+`:new`: create new file and split the window horizontally
+
+`:vnew`: create new file and split the window vertically
