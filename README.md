@@ -10,9 +10,9 @@ This repository includes files about Vim workshop
 - [x] Basic operation(zzjc)
 - [ ] Common Operation(zzjc): About 70% done
 - [ ] Quiz for zzjc's part(zzjc): 0%
-- [ ] Doc for vimrc(wr)
+- [x] Doc for vimrc(wr)
 - [ ] Quiz for wr's part?(wr)
-- [ ] Plugin and related software(wr)
+- [x] Plugin and related software(wr)
 
 <!-- Old version -->
 
