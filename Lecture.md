@@ -40,7 +40,7 @@ Before we start to learn vim's basic operation, there are several things to ment
 
     Vim adventure is a great game intended to help beginners to learn the vim with fun. Since it is non-free, you can pay for the rest of the game or find a reverse engineered version.
 
-5. [openvim](https://openvim.com)
+5. [Openvim](https://openvim.com)
 
 ---
 
@@ -216,6 +216,12 @@ Before we start to learn vim's basic operation, there are several things to ment
 3. Visual Block Mode
 
    Start Visual mode blockwise.
+
+4. Use `gu` and `gU`.
+
+5. Use `>` and `<`
+
+6. d, y, c, o in the visual mode
 
 ## Replace Mode*
 
