@@ -260,6 +260,8 @@ Vim 原项目地址: [GitHub - vim/vim](https://link.zhihu.com/?target=https%3A/
 
   ![](https://raw.githubusercontent.com/Hydraallen/images/master/img/Snipaste_2023-03-30_16-33-50.png)
 
++ help/man
+
 + [Ranger](https://github.com/ranger/ranger) -> available for macOS and Linux
 
 ​		Use vim key bindings to manage your files
