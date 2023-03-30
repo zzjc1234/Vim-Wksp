@@ -42,6 +42,8 @@ Before we start to learn vim's basic operation, there are several things to ment
 
 5. [Openvim](https://openvim.com)
 
+6. [Cheatsheet](https://devhints.io/vim)
+
 ---
 
 ## Mode Intro
@@ -133,8 +135,8 @@ Before we start to learn vim's basic operation, there are several things to ment
    |s|Sentence|
    |[ ( { < A [], (), or {}|block|
    |' " `|A quoted string|
-   |b|A block [(|
-   |B|A block in [{|
+   |b|A block (|
+   |B|A block in {|
    |t|A XML tag block|
 
 - Sentence and Paragraph in vim
