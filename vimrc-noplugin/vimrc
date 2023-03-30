@@ -14,7 +14,7 @@ filetype on         " required
 " ===
 " === Main code display
 " ===
-set nocompatible
+set nocompatible "不兼容Vi"
 set number "打开行号
 set norelativenumber "相对行号，relativenumber 为开启
 set cursorline "高亮当前行
