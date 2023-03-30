@@ -254,7 +254,11 @@ Vim 原项目地址: [GitHub - vim/vim](https://link.zhihu.com/?target=https%3A/
 
 ## Throw Away Your Mouse！
 
++ vscode
 
+  You may refer to -> `Vim-Wksp/vimrc-sample/vimrc-vscode`
+
+  ![](https://raw.githubusercontent.com/Hydraallen/images/master/img/Snipaste_2023-03-30_16-33-50.png)
 
 + [Ranger](https://github.com/ranger/ranger) -> available for macOS and Linux
 
