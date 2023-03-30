@@ -97,7 +97,7 @@ cd bundle
 git clone https://github.com/VundleVim/Vundle.vim.git
 ```
 
-Windows users may need to refer to this ->  https://github.com/VundleVim/Vundle.vim/wiki/Vundle-for-Windows`
+Windows users may need to refer to this ->  https://github.com/VundleVim/Vundle.vim/wiki/Vundle-for-Windows
 
 2. Write `vimrc`
 
@@ -204,7 +204,7 @@ In Linux, I believe you can find one by yourself!
 
 Here are some recommendations:
 
-5. 插件list（推荐）
+插件list（推荐）
 
 + [airline ](https://github.com/vim-airline/vim-airline)   状态栏
 
