@@ -116,7 +116,14 @@ Before we start to learn vim's basic operation, there are several things to ment
    6. `"*p / "+p:` Paste from system clipboard
    7. `"*y / "+y`: Paste to system clipboard
 
-3. Opeartors
+<!-- bug is here -->
+
+3. Editing
+
+   1. `u`: You can use `u` to undo the editing
+   2. `<C-R>`: You can use `<C-R>` to redo the editing
+
+4. Opeartors
 
    >Operators let you operate in a range of text (defined by motion). These are performed in normal mode.
 
@@ -184,7 +191,8 @@ Before we start to learn vim's basic operation, there are several things to ment
    6. `O`: insert in previous line
    7. `s`: delete char and insert
    8. `S`: delete line and insert
-   9. `C`: delete until the end of the line and insert
+   9. `c`: `c` is equal to "change". `c` is motion like `d` and `y`.
+   10. `C`: delete until the end of the line and insert
 
 2. Exit Insert Mode
    1. Press \<Esc\>: exit insert mode
@@ -192,7 +200,7 @@ Before we start to learn vim's basic operation, there are several things to ment
 
 ## Life Hack
 
-- Use `,` to repeat previous edit
+- Use `.` to repeat previous edit
 - Use `:!` to run command in terminal
 - Use `:r` to insert the file below the cursor
 - Vim Macro
