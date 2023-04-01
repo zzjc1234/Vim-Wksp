@@ -14,7 +14,7 @@ filetype on         " required
 " ===
 " === Main code display
 " ===
-set nocompatible
+set nocompatible "不兼容Vi"
 set number "打开行号
 set norelativenumber "相对行号，relativenumber 为开启
 set cursorline "高亮当前行
@@ -127,10 +127,10 @@ map sd :set splitbelow<CR>:split<CR>
 " === Window management
 " ===
 " Use <space> + new arrow keys for moving the cursor around windows
-"map <LEADER>k <C-w>k
-"map <LEADER>j <C-w>j
-"map <LEADER>h <C-w>h
-"map <LEADER>l <C-w>l
+map <LEADER>k <C-w>k
+map <LEADER>j <C-w>j
+map <LEADER>h <C-w>h
+map <LEADER>l <C-w>l
 
 
 " Resize splits with arrow keys
@@ -187,7 +187,6 @@ endfunc
 set ruler " 打开状态栏标尺
 set shiftwidth=4 " 设定 << 和 >> 命令移动时的宽度为 4
 set softtabstop=4 " 使得按退格键时可以一次删掉 4 个空格
-set tabstop=4 " 设定 tab 长度为 4
 set nobackup " 覆盖文件时不备份
 set autochdir " 自动切换当前目录为当前文件所在的目录
 

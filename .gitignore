@@ -4,4 +4,10 @@
 !LICENSE
 !vimrc*
 !/push
-
+!/Usage-reference
+!*.lua
+!/testForVim
+!/testForVim/*.txt
+!/testForVim/*.c
+!/src
+!/src/*.jpeg
