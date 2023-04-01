@@ -291,20 +291,6 @@ You can use `R` to enter the replace mode.
 
    Believe it or not, vim has its own language. You can use the command of vim to personalize your vim. This part will be included in the `Modify .vimrc(noplugin)`
 
-4. Split the window
-
-   `:vs` or `:vsplit`: split the window vertically
-
-   `:vs filename`: split the current window vertically, show the new file in the new window.
-
-   `:sp or :split`: split current window horizontally.
-
-   `:sp filename`: split current window horizontally and show the new file in the new window
-
-   `:new`: create new file and split the window horizontally
-
-   `:vnew`: create new file and split the window vertically
-
 - Search
 
    You can use search the string by entering `/` and `?`
