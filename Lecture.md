@@ -1,28 +1,70 @@
-# Part 1 -- Basic Operation
+# Vim Workshop
 
-This file gives a guideline for the vim workshop part 2.
+ By 汪睿，周赵嘉程，胡泓峥
 
----
-
-## Menu
-
-- [Part 1 -- Basic Operation](#part-1----basic-operation)
-  - [Menu](#menu)
-  - [Before Start](#before-start)
-  - [Mode Intro](#mode-intro)
-  - [Normal Mode](#normal-mode)
-  - [Why key in vim is so uncomfortable?](#why-key-in-vim-is-so-uncomfortable)
-  - [Insert Mode](#insert-mode)
-  - [Life Hack](#life-hack)
-  - [Visual Mode](#visual-mode)
-  - [Replace Mode\*](#replace-mode)
-  - [Command Mode](#command-mode)
+ 2023/4/2 19:00
 
 ---
 
-## Before Start
+## Part 0 -- Intro
 
-Before we start to learn vim's basic operation, there are several things to mention:
+### Our aim
+
+Learn how to use vim in your future project, and THOWR YOUR MOUSE. 
+
+### What is vim
+
+- An editor
+- vi -> visual interface
+- vim -> vi Improved
+
+---
+
+As you can see from the advertisement of this workshop, vim has many short-cuts and other fabulous functions that can aid our programming.
+
+### Why vim
+
+- No switch between keyboard and mouse
+- Easy to move
+- No duplicate operation
+
+### How to learn vim
+
+Practice Practice Practice. 
+
+From a small program or from an English essay
+
+## Part 1 -- Basic Operation
+
+### Menu
+
+- [Vim Workshop](#vim-workshop)
+  - [Part 0 -- Intro](#part-0----intro)
+    - [Our aim](#our-aim)
+    - [What is vim](#what-is-vim)
+    - [Why vim](#why-vim)
+    - [How to learn vim](#how-to-learn-vim)
+  - [Part 1 -- Basic Operation](#part-1----basic-operation)
+    - [Menu](#menu)
+    - [Before Start](#before-start)
+    - [Mode Intro](#mode-intro)
+    - [Normal Mode](#normal-mode)
+    - [Why key in vim is so uncomfortable?](#why-key-in-vim-is-so-uncomfortable)
+    - [Insert Mode](#insert-mode)
+    - [Life Hack](#life-hack)
+    - [Visual Mode](#visual-mode)
+    - [Replace Mode\*](#replace-mode)
+    - [Command Mode](#command-mode)
+  - [Part 2 -- vimrc](#part-2----vimrc)
+    - [Without Plugin](#without-plugin)
+      - [Shortcut key\&key mapping](#shortcut-keykey-mapping)
+    - [With Plugin](#with-plugin)
+    - [Vim Macro](#vim-macro)
+    - [Suggestions](#suggestions)
+    - [Other vim](#other-vim)
+    - [Throw Away Your Mouse！](#throw-away-your-mouse)
+
+### Before Start
 
 1. Use `:help`
 
@@ -46,7 +88,7 @@ Before we start to learn vim's basic operation, there are several things to ment
 
 ---
 
-## Mode Intro
+### Mode Intro
 
 1. Normal Mode
 2. Insert Mode
@@ -54,7 +96,9 @@ Before we start to learn vim's basic operation, there are several things to ment
 4. Replace Mode*
 5. Command Mode
 
-## Normal Mode
+**Demo using empty**
+
+### Normal Mode
 
 1. Navigating
    1. Basic: hjkl
@@ -67,9 +111,9 @@ Before we start to learn vim's basic operation, there are several things to ment
 
       You can use the wbe to jump word by word.
 
-      Difference between `word` and `WORD`: The `word` is the combination of (a-zA-Z0-9), or the combination of punctuation and character like `@#$%` while the WORD is any non-empty string between the white-space.
+      Difference between `word` and `WORD`: The `word` is the combination of (a-zA-Z0-9), or the combination of punctuation and character like `@##$%` while the WORD is any non-empty string between the white-space.
 
-      NOTE THAT `as213df%#^>?^&` is two `word`, `as213df` and `%#^>?^&`.
+      NOTE THAT `as213df%##^>?^&` is two `word`, `as213df` and `%#^>?^&`.
 
       - `w`: go to the beginning of next word
       - `b`: go to the beginning of previous word
@@ -116,7 +160,7 @@ Before we start to learn vim's basic operation, there are several things to ment
    6. `"*p / "+p:` Paste from system clipboard
    7. `"*y / "+y`: Paste to system clipboard
 
-<!-- bug is here -->
+   **Note:** For users using wsl, you may encounter some problems when using the clipboard, this issue may be solved by part2
 
 3. Editing
 
@@ -176,11 +220,13 @@ Before we start to learn vim's basic operation, there are several things to ment
 
    For example: 3dd means delete three lines.Times of repetition should be the multiplication of the numbers. Eg. 2y3y means yank 6 lines.
 
-## Why key in vim is so uncomfortable?
+   **Demo with article.txt**
+
+### Why key in vim is so uncomfortable?
 
 ![keyboard](src/keyboard.jpeg)
 
-## Insert Mode
+### Insert Mode
 
 1. Open Insert Mode:
    1. `a`: append
@@ -198,13 +244,13 @@ Before we start to learn vim's basic operation, there are several things to ment
    1. Press \<Esc\>: exit insert mode
    2. ctrl c: exit insert mode and abort current command
 
-## Life Hack
+### Life Hack
 
 - Use `.` to repeat previous edit
 - Use `:!` to run command in terminal
 - Use `:r` to insert the file below the cursor
 
-## Visual Mode
+### Visual Mode
 
 1. Visual Mode
 
@@ -224,7 +270,7 @@ Before we start to learn vim's basic operation, there are several things to ment
 
 6. d, y, c, o in the visual mode
 
-**exercise**
+**Exercise**
 
 Change `wallpaper.txt`
 
@@ -244,15 +290,13 @@ Wallpaper_1.jpg
 Wallpaper_1.jpg
 ```
 
-
-
-## Replace Mode*
+### Replace Mode*
 
 You can use `r` to replace a character.
 
 You can use `R` to enter the replace mode.
 
-## Command Mode
+### Command Mode
 
 1. Exiting Vim:
    1. `:q`: quit the file
@@ -288,7 +332,7 @@ You can use `R` to enter the replace mode.
    ```
 
    ```zsh
-   fg #go back to vim
+   fg ##go back to vim
    ```
 
    You can also determine which terminal you use with the command
@@ -319,7 +363,7 @@ You can use `R` to enter the replace mode.
   - `n`: Search for the next pattern
   - `N`: Previous match
   - `*`: Next whole word under cursor
-  - `#`: Previous whole word under cursor
+  - `##`: Previous whole word under cursor
 
    Vim will record your search history. You use command like /$\uparrow$ or /$\downarrow$ if you want to search the word you searched before.
 
@@ -393,13 +437,12 @@ You can use `R` to enter the replace mode.
    :%s/\vmagics?/abstract/g
    ```
 
+   **Quiz using fix_article**
+   **Quiz using C_Code.c**
 
+## Part 2 -- vimrc
 
-
-
-# Part 2 -- vimrc
-
-## Without Plugin
+### Without Plugin
 
 See -> `Vim-Wksp/vimrc-noplugin/vimrc`
 
@@ -424,7 +467,7 @@ And `vim vimrc`
 
 Read it line by line! (cover `split` btw)
 
-### Shortcut key&key mapping
+#### Shortcut key&key mapping
 
 1. `map` Equivalent key
 
@@ -479,7 +522,7 @@ Move the cursor position manually  `ctrl+w+h/j/k/l`
 
    Go back to default `:color default`
 
-## With Plugin
+### With Plugin
 
 See -> `Vim-Wksp/vimrc-withplugin/vimrc`
 
@@ -505,14 +548,14 @@ set nocompatible              " be iMproved, required
 filetype off
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin('~/.vim/bundle')
+call vundle##begin('~/.vim/bundle')
 " alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+"call vundle##begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 
 
-call vundle#end() " required
+call vundle##end() " required
 
 filetype on " required
 filetype indent on  " required
@@ -573,7 +616,7 @@ If you want use more plugin and don't want to spend too much time, you may refer
 
 
 
-## Vim Macro
+### Vim Macro
 
    You can use vim macro to complete the repetition work.
 
@@ -596,7 +639,7 @@ wallpaper_100.jpg
 
 *Hint*: `Ctrl+a ` integer+1；`Ctrl+x` integer-1
 
-## Suggestions
+### Suggestions
 
 1. If you want use vim more smoothly, you may need to change `esc` and `Capslock`
 
@@ -641,7 +684,7 @@ Here are some recommendations:
 
 
 
-## Other vim
+### Other vim
 
 + Neovim
 
@@ -658,7 +701,7 @@ Vim 原项目地址: [GitHub - vim/vim](https://link.zhihu.com/?target=https%3A/
 
 ![](https://raw.githubusercontent.com/Hydraallen/images/master/img/the_violence_has_escalated.png)
 
-## Throw Away Your Mouse！
+### Throw Away Your Mouse！
 
 + vscode
 
