@@ -274,7 +274,7 @@ From a small program or from an English essay
 
 Change `wallpaper.txt`
 
-```
+```txt
 wallpaper_1.jpg
 wallpaper_1.jpg
 ......
@@ -283,7 +283,7 @@ wallpaper_1.jpg
 
 Into
 
-```
+```txt
 Wallpaper_1.jpg
 Wallpaper_1.jpg
 ......
@@ -363,7 +363,7 @@ You can use `R` to enter the replace mode.
   - `n`: Search for the next pattern
   - `N`: Previous match
   - `*`: Next whole word under cursor
-  - `##`: Previous whole word under cursor
+  - `#`: Previous whole word under cursor
 
    Vim will record your search history. You use command like /$\uparrow$ or /$\downarrow$ if you want to search the word you searched before.
 
@@ -439,6 +439,7 @@ You can use `R` to enter the replace mode.
 
    **Quiz using fix_article**
    **Quiz using C_Code.c**
+   **Final Quiz**
 
 ## Part 2 -- vimrc
 
