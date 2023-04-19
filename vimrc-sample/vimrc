@@ -4,7 +4,7 @@
 " | |  | | |_| |   \ V /  | || |  | |  _ <| |___
 " |_|  |_|\__, |    \_/  |___|_|  |_|_| \_\\____|
 "         |___/
-
+" @Hydraallen
 
 " ====================
 " === Editor Setup ===
@@ -225,7 +225,8 @@ Plugin 'majutsushi/tagbar', { 'on': 'TagbarOpenAutoClose' }
 " Error checking
 Plugin 'w0rp/ale'
 
-" Auto Complete
+"Auto Complete
+"If you use MacOS, you may need to use macvim and install YCM manually!
 "Plugin 'ycm-core/YouCompleteMe'
 Plugin 'Valloric/YouCompleteMe'
 "Plugin 'altercation/vim-colors-solarized'
@@ -261,7 +262,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'vim-scripts/indentpython.vim'
 
 " Markdown
-Plugin 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
+Plugin 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] } "If you cannot install this plugin, just delete it.
 Plugin 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle' }
 Plugin 'vimwiki/vimwiki'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -281,7 +282,7 @@ Plugin 'scrooloose/nerdcommenter' " in <space>cc to comment a line
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'kana/vim-textobj-user'
 Plugin 'fadein/vim-FIGlet'
-"Plugin 'eddiebergman/nvim-treesitter-pyfold'
+"Plugin 'eddiebergman/nvim-treesitter-pyfold' "If you cannot install this plugin,just delete it.
 "Plug 'lyokha/vim-xkbswitch'
 " All of your Plugins must be added before the following line
 call vundle#end() " required
