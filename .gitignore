@@ -11,3 +11,4 @@
 !/src
 !/src/*.jpeg
 !*.config
+!*.pdf

@@ -1,6 +1,6 @@
 # Vim Workshop
 
- By 汪睿，周赵嘉程，胡泓峥
+ By 汪睿@Hydraallen，周赵嘉程，胡泓峥
 
  2023/4/2 19:00
 
