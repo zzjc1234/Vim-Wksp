@@ -10,3 +10,4 @@
 !/testForVim/*.c
 !/src
 !/src/*.jpeg
+!*.config
